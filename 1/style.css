@@ -1,9 +1,9 @@
-#いち{font-size: 30px;
+#いち{font-size: 80px;
    text-align: center;
    color: blue;}
-#に{font-size: 50px;
+#に{font-size: 40px;
    text-align: center;}
-#空白{font-size: 50px;}
+#空白{font-size: 55px;}
 #マス1{font-size: 100px;}#マス2{font-size: 100px;}
 #マス3{font-size: 100px;}#マス4{font-size: 100px;}
 #マス5{font-size: 100px;}#マス6{font-size: 100px;}
@@ -28,3 +28,4 @@
 #バツ11{font-size: 100px;color: blue;}#バツ12{font-size: 100px;color: blue;}
 #バツ13{font-size: 100px;color: blue;}#バツ14{font-size: 100px;color: blue;}
 #バツ15{font-size: 100px;color: blue;}#バツ16{font-size: 100px;color: blue;}
+
