@@ -47,11 +47,8 @@ button.onclick=function(){
     sikaku1.onclick=function(){ マス一 =1;
     sikaku1.textContent='';let マル1 = '○';maru1.textContent=マル1;
     縦1=縦1+1;  tate1.textContent=縦1;横1=横1+1;yoko1.textContent=横1;斜1=斜1+1;
-    turn =turn-1;sikaku2.textContent='';let バツ2 = '×';batsu2.textContent=バツ2;
-    if(マス四>=1){batsu2.textContent='';sikaku5.textContent='';let バツ5='×';batsu5.textContent=バツ5;let マス2 = '□';sikaku2.textContent=マス2;}
-    if(マス三>=1){batsu2.textContent='';sikaku5.textContent='';let バツ5='×';batsu5.textContent=バツ5;let マス2 = '□';sikaku2.textContent=マス2;}
-    if(マス二>=1){batsu2.textContent='';sikaku5.textContent='';let バツ5='×';batsu5.textContent=バツ5;sikaku2.textContent='';}
-    if(横1>=7){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;}if(横1>=8){batsu4.textContent='';}
+    turn =turn-1;
+    if(横1>=7){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;マス四 =2;}if(横1>=8){batsu4.textContent='';}
     if(横1>=11){sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;batsu4.textContent='';}
     if(横1>=13){sikaku2.textContent='';let バツ2 = '×';batsu2.textContent=バツ2;batsu4.textContent='';batsu3.textContent='';}
     if(縦1>=7){sikaku13.textContent='';let バツ13 = '×';batsu13.textContent=バツ13;}if(縦1>=8){batsu13.textContent='';}
@@ -66,10 +63,6 @@ button.onclick=function(){
     sikaku2.onclick=function(){マス二 =1;
     sikaku2.textContent='';let マル2 = '○';maru2.textContent=マル2;
     縦2=縦2+1;横1=横1+2;yoko1.textContent=横1;
-    sikaku1.textContent='';let バツ1 = '×';batsu1.textContent=バツ1;
-    if(マス四>=1){batsu1.textContent='';sikaku6.textContent='';let バツ6 = '×';batsu6.textContent=バツ6;let マス1 = '□';sikaku1.textContent=マス1;}
-    if(マス一>=1){batsu1.textContent='';sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;sikaku1.textContent='';}
-    if(マス三>=1){batsu1.textContent='';batsu3.textContent='';sikaku6.textContent='';let バツ6 = '×';batsu6.textContent=バツ6;let マス1 = '□';sikaku1.textContent=マス1;}
     if(マス一>=1){sikaku1.textContent='';}
     if(横1>=15){youwin.textContent=勝利;}if(縦2>=15){ youwin.textContent=勝利}
     if(横1>=7){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;}if(横1>=8){batsu4.textContent='';}
@@ -82,11 +75,6 @@ button.onclick=function(){
     sikaku3.onclick=function(){マス三 =1;
     sikaku3.textContent='';let マル3 = '○';maru3.textContent=マル3;
     縦3=縦3+1;横1=横1+4;yoko1.textContent=横1;
-    sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;
-    if(マス四>=1){batsu4.textContent='';sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;}
-    if(マス二>=1){batsu4.textContent='';sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;let マス4 = '□';sikaku4.textContent=マス4;}
-    if(マス一>=1){batsu4.textContent='';sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;let マス4 = '□';sikaku4.textContent=マス4;}
-    if(マス七>=1){batsu7.textContent='';sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;}
     if(横1>=15){ youwin.textContent=勝利;}if(縦3>=15){ youwin.textContent=勝利;}
     if(横1>=7){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;}if(横1>=8){batsu4.textContent='';}
     if(横1>=13){sikaku2.textContent='';let バツ2 = '×';batsu2.textContent=バツ2;batsu4.textContent='';}
@@ -98,10 +86,6 @@ button.onclick=function(){
     sikaku4.onclick=function(){マス四 =1;
     sikaku4.textContent='';let マル4 = '○';maru4.textContent=マル4;
     縦4=縦4+1;横1=横1+8;yoko1.textContent=横1;斜2=斜2+1;turn =turn-1;
-    sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;
-    if(マス二>=1){batsu3.textContent='';sikaku8.textContent='';let バツ8='×';batsu8.textContent=バツ8;sikaku3.textContent='□';}
-    if(マス一>=1){batsu3.textContent='';sikaku8.textContent='';let バツ8='×';batsu8.textContent=バツ8;sikaku3.textContent='□';}
-    if(マス八>=1){sikaku8.textContent='';sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;batsu8.textContent='';}
     if(横1>=15){ youwin.textContent=勝利;}if(縦4>=15){ youwin.textContent=勝利;}
     if(斜2>=15){ youwin.textContent=勝利;}
     if(横1>=11){sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;}if(横1>=12){batsu3.textContent='';}
@@ -116,10 +100,7 @@ button.onclick=function(){
     }
     sikaku5.onclick=function(){マス五 =1;
     sikaku5.textContent='';let マル5 = '○';maru5.textContent=マル5;
-    縦1=縦1+2;tate1.textContent=縦1;横2=横2+1;turn =turn-1;sikaku6.textContent='';let バツ6 = '×';batsu6.textContent=バツ6;
-    if(マス八>=1){batsu6.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;let マス6 = '□';sikaku6.textContent=マス6;}
-    if(マス七>=1){batsu6.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;let マス6 = '□';sikaku6.textContent=マス6;}
-    if(マス六>=1){batsu6.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;sikaku6.textContent='';}
+    縦1=縦1+2;tate1.textContent=縦1;横2=横2+1;turn =turn-1;
     if(横2>=15){ youwin.textContent=勝利;}if(縦1>=15){youwin.textContent=勝利}    
     if(横2>=7){sikaku8.textContent='';let バツ8 = '×';batsu8.textContent=バツ8;}if(横2>=8){batsu8.textContent='';}
     if(横2>=11){sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;batsu8.textContent='';}
@@ -130,11 +111,6 @@ button.onclick=function(){
     sikaku6.onclick=function(){マス六 =1;
     sikaku6.textContent='';let マル6 = '○';maru6.textContent=マル6;
     縦2=縦2+2;横2=横2+2;斜1=斜1+2;turn =turn-1;
-    sikaku5.textContent='';let バツ5 = '×';batsu5.textContent=バツ5;
-    if(マス八>=1){batsu5.textContent='';sikaku10.textContent='';let バツ10='×';batsu10.textContent=バツ10;let マス5 = '□';sikaku5.textContent=マス5;}
-    if(マス五>=1){batsu5.textContent='';sikaku7.textContent='';let バツ7='×';batsu7.textContent=バツ7;sikaku5.textContent='';}
-    if(マス七>=1){batsu5.textContent='';sikaku10.textContent='';let バツ10='×';batsu10.textContent=バツ10;let マス5 = '□';sikaku5.textContent=マス5;}
-    if(マス十>=1){batsu10.textContent='';let マル10 = '○';maru10.textContent=マル10;}
     if(横2>=15){ youwin.textContent=勝利;}if(縦2>=15){ youwin.textContent=勝利;}
     if(斜1>=15){ youwin.textContent=勝利;}    
     if(横2>=7){sikaku8.textContent='';let バツ8 = '×';batsu8.textContent=バツ8;}if(横2>=8){batsu8.textContent='';}
@@ -149,11 +125,6 @@ button.onclick=function(){
     sikaku7.onclick=function(){マス七 =1;
     sikaku7.textContent='';let マル7 = '○';maru7.textContent=マル7;
     縦3=縦3+2;横2=横2+4;斜2=斜2+2;turn =turn-1;
-    sikaku8.textContent='';let バツ8 = '×';batsu8.textContent=バツ8;
-    if(マス五>=1){batsu8.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;let マス8 = '□';sikaku8.textContent=マス8;}
-    if(マス六>=1){batsu8.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;let マス8 = '□';sikaku8.textContent=マス8;}
-    if(マス八>=1){batsu8.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;sikaku8.textContent='';}
-    if(マス十一>=1){batsu11.textContent='';sikaku8.textContent='';let バツ8='×';batsu8.textContent=バツ8;}
     if(横2>=15){ youwin.textContent=勝利;}if(縦3>=15){ youwin.textContent=勝利;}
     if(斜2>=15){ youwin.textContent=勝利;}   
     if(横2>=7){sikaku8.textContent='';let バツ8 = '×';batsu8.textContent=バツ8;}if(横2>=8){batsu8.textContent='';}
@@ -168,10 +139,6 @@ button.onclick=function(){
     sikaku8.onclick=function(){マス八 =1;
     sikaku8.textContent='';let マル8 = '○';maru8.textContent=マル8;
     縦4=縦4+2;横2=横2+8;turn =turn-1;
-    sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;
-    if(マス十二>=1){sikaku12.textContent='';sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;batsu12.textContent='';}
-    if(マス五>=1){batsu7.textContent='';sikaku12.textContent='';let バツ12='×';batsu12.textContent=バツ12;let マス7 = '□';sikaku7.textContent=マス7;}
-    if(マス六>=1){batsu7.textContent='';sikaku12.textContent='';let バツ12='×';batsu12.textContent=バツ12;let マス7 = '□';sikaku7.textContent=マス7;}
     if(横2>=15){ youwin.textContent=勝利;}if(縦4>=15){ youwin.textContent=勝利;}
     if(横2>=11){sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;}if(横2>=12){batsu7.textContent='';}
     if(横2>=13){sikaku6.textContent='';let バツ6 = '×';batsu6.textContent=バツ6;batsu7.textContent='';}
@@ -182,10 +149,6 @@ button.onclick=function(){
     sikaku9.onclick=function(){マス九 =1;
     sikaku9.textContent='';let マル9 = '○';maru9.textContent=マル9;
     縦1=縦1+4;tate1.textContent=縦1;横3=横3+1;turn =turn-1;
-    sikaku10.textContent='';let バツ10 = '×';batsu10.textContent=バツ10;
-    if(マス十二>=1){batsu10.textContent='';sikaku13.textContent='';let バツ13='×';batsu13.textContent=バツ13;let マス10 = '□';sikaku10.textContent=マス10;}
-    if(マス十一>=1){batsu10.textContent='';sikaku13.textContent='';let バツ13='×';batsu13.textContent=バツ13;let マス10 = '□';sikaku10.textContent=マス10;}
-    if(マス十>=1){batsu10.textContent='';sikaku13.textContent='';let バツ13='×';batsu13.textContent=バツ13;sikaku13.textContent='';sikaku10.textContent='';}
     if(横3>=15){ youwin.textContent=勝利;}if(縦1>=15){ youwin.textContent=勝利;}
     if(横3>=7){sikaku12.textContent='';let バツ12 = '×';batsu12.textContent=バツ12;}if(横3>=8){batsu12.textContent='';}
     if(横3>=11){sikaku11.textContent='';let バツ11 = '×';batsu11.textContent=バツ11;batsu12.textContent='';}
@@ -196,11 +159,6 @@ button.onclick=function(){
     sikaku10.onclick=function(){マス十 =1;
     sikaku10.textContent='';let マル10 = '○';maru10.textContent=マル10;
     縦2=縦2+4;横3=横3+2;斜2=斜2+4;turn =turn-1;
-    sikaku9.textContent='';let バツ9 = '×';batsu9.textContent=バツ9;
-    if(マス十二>=1){batsu9.textContent='';sikaku14.textContent='';let バツ14='×';batsu14.textContent=バツ14;let マス9 = '□';sikaku9.textContent=マス9;}
-    if(マス九>=1){batsu9.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;sikaku9.textContent='';}
-    if(マス十一>=1){batsu9.textContent='';sikaku14.textContent='';let バツ14='×';batsu14.textContent=バツ14;let マス9 = '□';sikaku9.textContent=マス9;}
-    if(マス十一>=1){batsu9.textContent='';sikaku14.textContent='';let バツ14='×';batsu14.textContent=バツ14;let マス9 = '□';sikaku9.textContent=マス9;}
     if(横3>=15){ youwin.textContent=勝利;}if(縦2>=15){ youwin.textContent=勝利;}
     if(斜2>=15){ youwin.textContent=勝利;}
     if(横3>=7){sikaku12.textContent='';let バツ12 = '×';batsu12.textContent=バツ12;}if(横3>=8){batsu12.textContent='';}
@@ -214,10 +172,7 @@ button.onclick=function(){
     if(斜2>=14){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;batsu13.textContent='';batsu7.textContent='';}}
     sikaku11.onclick=function(){マス十一 =1;
     sikaku11.textContent='';let マル11 = '○';maru11.textContent=マル11;
-    縦3=縦3+4;横3=横3+4;斜1=斜1+4;turn =turn-1;sikaku12.textContent='';let バツ12 = '×';batsu12.textContent=バツ12;
-    if(マス九>=1){batsu12.textContent='';sikaku15.textContent='';let バツ15='×';batsu15.textContent=バツ15;let マス12 = '□';sikaku12.textContent=マス12;}
-    if(マス十>=1){batsu12.textContent='';sikaku15.textContent='';let バツ15='×';batsu15.textContent=バツ15;let マス12 = '□';sikaku12.textContent=マス12;}
-    if(マス十二>=1){batsu12.textContent='';sikaku15.textContent='';let バツ15='×';batsu15.textContent=バツ15;sikaku12.textContent='';}
+    縦3=縦3+4;横3=横3+4;斜1=斜1+4;turn =turn-1;
     if(横3>=15){youwin.textContent=勝利;}if(縦3>=15){ youwin.textContent=勝利;}
     if(斜1>=15){ youwin.textContent=勝利;}
     if(横3>=7){sikaku12.textContent='';let バツ12 = '×';batsu12.textContent=バツ12;}if(横3>=8){batsu12.textContent='';}
@@ -231,11 +186,7 @@ button.onclick=function(){
     if(斜1>=14){sikaku6.textContent='';let バツ1 = '×';batsu1.textContent=バツ1;batsu16.textContent='';batsu6.textContent='';}}
     sikaku12.onclick=function(){マス十二 =1;
     sikaku12.textContent='';let マル12 ='○';maru12.textContent=マル12;
-    縦4=縦4+4;横3=横3+8;turn =turn-1;
-    sikaku11.textContent='';let バツ11 = '×';batsu11.textContent=バツ11;
-    if(マス十六>=1){sikaku12.textContent='';sikaku11.textContent='';let バツ11 = '×';batsu11.textContent=バツ11;batsu16.textContent='';}
-    if(マス九>=1){batsu11.textContent='';sikaku16.textContent='';let バツ16='×';batsu16.textContent=バツ16;let マス11 = '□';sikaku11.textContent=マス11;}
-    if(マス十>=1){batsu11.textContent='';sikaku16.textContent='';let バツ16='×';batsu16.textContent=バツ16;let マス11 = '□';sikaku11.textContent=マス11;'○';maru16.textContent=マル16;} 
+    縦4=縦4+4;横3=横3+8;turn =turn-1; 
     if(横3>=15){ youwin.textContent=勝利;}if(縦4>=15){youwin.textContent=勝利;}
     if(横3>=11){sikaku11.textContent='';let バツ11 = '×';batsu11.textContent=バツ11;}if(横3>=12){batsu11.textContent='';}
     if(横3>=13){sikaku10.textContent='';let バツ10 = '×';batsu10.textContent=バツ10;batsu11.textContent='';}
@@ -245,11 +196,7 @@ button.onclick=function(){
     if(縦4>=14){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;batsu16.textContent='';batsu8.textContent='';}}
     sikaku13.onclick=function(){マス十三 =1;
     sikaku13.textContent='';let マル13 = '○';maru13.textContent=マル13;
-    縦1=縦1+8;tate1.textContent=縦1;横4=横4+1;斜2=斜2+8;turn =turn-1;sikaku14.textContent='';let バツ14 = '×';batsu14.textContent=バツ14;
-    if(マス十六>=1){batsu14.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;let マス14 = '□';sikaku14.textContent=マス14;}
-    if(マス十五>=1){batsu14.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;let マス14 = '□';sikaku14.textContent=マス14;}
-    if(マス十四>=1){batsu14.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;sikaku14.textContent='';}
-    if(マス九>=1){batsu14.textContent='';sikaku9.textContent='';let バツ9='×';batsu9.textContent=バツ9;sikaku14.textContent='';}
+    縦1=縦1+8;tate1.textContent=縦1;横4=横4+1;斜2=斜2+8;turn =turn-1;
     if(横4>=15){ youwin.textContent=勝利;}if(縦1>=15){ youwin.textContent=勝利;}
     if(斜2>=15){ youwin.textContent=勝利;}
     if(横4>=7){sikaku16.textContent='';let バツ16 = '×';batsu16.textContent=バツ16;}if(横4>=8){batsu16.textContent='';}
@@ -264,10 +211,6 @@ button.onclick=function(){
     sikaku14.onclick=function(){マス十四 =1;
     sikaku14.textContent='';let マル14 = '○';maru14.textContent=マル14;
     縦2=縦2+8;横4=横4+2;turn =turn-1;
-    sikaku13.textContent='';let バツ13 = '×';batsu13.textContent=バツ13;
-    if(マス十六>=1){batsu13.textContent='';sikaku10.textContent='';let バツ10='×';batsu10.textContent=バツ10;let マス13 = '□';sikaku13.textContent=マス13;}
-    if(マス十五>=1){batsu13.textContent='';sikaku10.textContent='';let バツ10='×';batsu10.textContent=バツ10;let マス13 = '□';sikaku13.textContent=マス13;}    
-    if(マス十三>=1){batsu13.textContent='';sikaku10.textContent='';let バツ10='×';batsu10.textContent=バツ10;sikaku13.textContent='';}
     if(横4>=15){ youwin.textContent=勝利;}if(縦2>=15){ youwin.textContent=勝利;}
     if(横4>=7){sikaku16.textContent='';let バツ16 = '×';batsu16.textContent=バツ16;}if(横4>=8){batsu16.textContent='';}
     if(横4>=11){sikaku15.textContent='';let バツ15 = '×';batsu15.textContent=バツ15;batsu16.textContent='';}
@@ -277,10 +220,7 @@ button.onclick=function(){
     if(縦2>=14){sikaku2.textContent='';let バツ2 = '×';batsu2.textContent=バツ2;batsu10.textContent='';batsu6.textContent='';}}
     sikaku15.onclick=function(){マス十五 =1;
     sikaku15.textContent='';let マル15 = '○';maru15.textContent=マル15;
-    縦3=縦3+8;横4=横4+4;turn =turn-1; sikaku16.textContent='';let バツ16 = '×';batsu16.textContent=バツ16;  
-    if(マス十三>=1){batsu16.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;let マス16 = '□';sikaku16.textContent=マス16;}
-    if(マス十四>=1){batsu16.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;let マス16 = '□';sikaku16.textContent=マス16;}
-    if(マス十六>=1){batsu16.textContent='';sikaku11.textContent='';let バツ11='×';batsu11.textContent=バツ11;sikaku16.textContent='';}
+    縦3=縦3+8;横4=横4+4;turn =turn-1;
     if(横4>=15){ youwin.textContent=勝利;}if(縦3>=15){ youwin.textContent=勝利;}
     if(横4>=7){sikaku16.textContent='';let バツ16 = '×';batsu16.textContent=バツ16;}if(横4>=8){batsu16.textContent='';}
     if(横4>=13){sikaku14.textContent='';let バツ14 = '×';batsu14.textContent=バツ14;batsu16.textContent='';}
@@ -290,10 +230,17 @@ button.onclick=function(){
     if(縦3>=14){sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;batsu11.textContent='';batsu7.textContent='';}}
     sikaku16.onclick=function(){マス十六 =1;
     sikaku16.textContent='';let マル16 = '○';maru16.textContent=マル16;
-    縦4=縦4+8;横4=横4+8;斜1=斜1+8;turn =turn-1;sikaku15.textContent='';let バツ15 = '×';batsu15.textContent=バツ15;
-    if(マス十二>=1){sikaku15.textContent='';sikaku15.textContent='';let バツ15 = '×';batsu15.textContent=バツ15;batsu12.textContent='';}
-    if(マス十三>=1){batsu15.textContent='';sikaku12.textContent='';let バツ12='×';batsu12.textContent=バツ12;let マス15 = '□';sikaku15.textContent=マス15;}
-    if(マス十四>=1){batsu15.textContent='';sikaku12.textContent='';let バツ12='×';batsu12.textContent=バツ12;let マス15 = '□';sikaku15.textContent=マス15;'○';maru16.textContent=マル16;} 
+    縦4=縦4+8;横4=横4+8;斜1=斜1+8;turn =turn-1;
+    
+    
+    if(マス一<=0){sikaku1.textContent='';let バツ1 = '×';batsu1.textContent=バツ1;マス一=2;}else{if(マス二<=0){sikaku2.textContent='';let バツ2 = '×';batsu2.textContent=バツ2;マス二=2;}
+    else{if(マス三<=0){sikaku3.textContent='';let バツ3 = '×';batsu3.textContent=バツ3;マス三=2;}else{if(マス四<=0){sikaku4.textContent='';let バツ4 = '×';batsu4.textContent=バツ4;マス四=2;}
+    else{if(マス五<=0){sikaku5.textContent='';let バツ5 = '×';batsu5.textContent=バツ5;マス五=2;}else{if(マス六<=0){sikaku6.textContent='';let バツ6 = '×';batsu6.textContent=バツ6;マス六=2;}
+    else{if(マス七<=0){sikaku7.textContent='';let バツ7 = '×';batsu7.textContent=バツ7;マス七=2;}else{if(マス八<=0){sikaku8.textContent='';let バツ8 = '×';batsu8.textContent=バツ8;マス八=2;
+    }}}}}}}}
+    
+    
+    
     if(横4>=15){ youwin.textContent=勝利;}if(縦4>=15){ youwin.textContent=勝利;}
     if(斜1>=15){ youwin.textContent=勝利;}
     if(横4>=11){sikaku15.textContent='';let バツ15 = '×';batsu15.textContent=バツ15;}if(横4>=12){batsu15.textContent='';}
