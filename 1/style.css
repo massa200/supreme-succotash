@@ -4,7 +4,9 @@
 #に{font-size: 50px;
    text-align: center;}
 #空白{font-size: 50px;}
-.マス{font-size: 100px;}
+.マス{color: black;
+      font-size: 100px;
+      }
 .マル{color: red;
       font-size: 100px;}
 .バツ{color: blue;
