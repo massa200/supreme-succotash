@@ -49,17 +49,14 @@ const batsu14 = document.getElementById('バツ14');batsu14.textContent='';
 const batsu15 = document.getElementById('バツ15');batsu15.textContent='';
 const batsu16 = document.getElementById('バツ16');batsu16.textContent='';
 
-    const sikakus = document.getElementsByClassName('マス');sikakus[1]
-    const marus = document.getElementsByClassName('マル');marus[1]
-button.onclick=function(){
-for(let s=0;s<marus.length;s++){
-    marus[s].textContent='';}
-for(let i=0;i<sikakus.length;i++){
-    sikakus[i].textContent='□';}
+const sikakus = document.getElementsByClassName('マス');sikakus[1]
 
+button.onclick=function(){
+for(let i=0;i<sikakus.length;i++){
+    if(i % 2 == 1) {sikakus[i].textContent='';}else{sikakus[i].textContent='□';}sikakus[i].classList.remove("マル");}
     taitoru.textContent='';
     button.textContent ='reset';}
 for(let i=0;i<sikakus.length;i++){let s=i;
     sikakus[i].onclick=function(){
-    ;sikakus[i].textContent='';marus[s].textContent='○';sikakus[i].classList.add("マル");}
+    if(i % 2 == 0) {sikakus[i].textContent='';sikakus[i+1].textContent='○';sikakus[i+1].classList.add("マル");}}
     }
