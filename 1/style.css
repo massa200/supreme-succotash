@@ -1,11 +1,16 @@
-#いち{font-size: 30px;
+#いち{font-size: 70px;
    text-align: center;
    color: blue;}
 #に{font-size: 50px;
-   text-align: center;}
+    text-align: center;
+    color: rgb(37, 37, 40);}
 #空白{font-size: 50px;}
 .マス{font-size: 100px;}
 .シカク{color: black;}
 .マル{color: red;}
 .バツ{color: blue;}
+.player{color: black;
+        font-size: 20px;}
+#you{color: red;font-size:30px;}
+#aite{color:blue;font-size:30px;}
       
