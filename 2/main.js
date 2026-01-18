@@ -70,7 +70,7 @@ for(let i=0;i<sikakus.length;i++){
             if(i >> 2 == 0){yoko1=yoko1+1;if(yoko1 == 4){button.textContent ='you win!';}}
             if(i >> 2 == 1){yoko2=yoko2+1;if(yoko2 == 4){button.textContent ='you win!';}}
             if(i >> 2 == 2){yoko3=yoko3+1;if(yoko3 == 4){button.textContent ='you win!';}}
-            if(i >> 2 == 3){yoko3=yoko4+1;if(yoko4 == 4){button.textContent ='you win!';}}
+            if(i >> 2 == 3){yoko4=yoko4+1;if(yoko4 == 4){button.textContent ='you win!';}}
             if(i%5 === 0){naname1=naname1+1;if(naname1 == 4){button.textContent ='you win!';}}
             if(i%3 === 0){naname2=naname2+1;if(naname2 == 4){button.textContent ='you win!';}}
             //
