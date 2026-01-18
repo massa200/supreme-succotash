@@ -29,14 +29,14 @@ for(let i=0;i<sikakus.length;i++){
 for(let i=0;i<sikakus.length;i++){
     sikakus[i].onclick=function(){
     if(sikakus[i].classList.contains('マル')){}else{if(sikakus[i].classList.contains('バツ')){}else{
-    sikakus[i].textContent='○';sikakus[i].classList.add("マル");
-        if(i>=8){if(sikakus[i-4].classList.contains('マル')){sikakus[i+4].textContent='×';sikakus[i+4].classList.add("バツ");}
+        sikakus[i].textContent='○';sikakus[i].classList.add("マル");
+        if(i>>8){if(sikakus[i-2].classList.contains('マル')){sikakus[i+4].textContent='×';sikakus[i+4].classList.add("バツ");}
             else{if(sikakus[i+1].classList.contains('マル')){sikakus[i-2].textContent='×';sikakus[i-2].classList.add("バツ");}
             else{if(sikakus[i-3].classList.contains('マル')){sikakus[i+1].textContent='×';sikakus[i+1].classList.add("バツ");}
             else{if(sikakus[i-1].classList.contains('マル')){sikakus[i-3].textContent='×';sikakus[i-3].classList.add("バツ");}
             else{sikakus[i-1].textContent='×';sikakus[i-1].classList.add("バツ");}}}}}
         else{if(i>=4){
-            {if(sikakus[i+4].classList.contains('マル')){sikakus[i-4].textContent='×';sikakus[i-4].classList.add("バツ");}
+            {if(sikakus[i-3].classList.contains('マル')){sikakus[i-4].textContent='×';sikakus[i-4].classList.add("バツ");}
             else{if(sikakus[i-1].classList.contains('マル')){sikakus[i-3].textContent='×';sikakus[i-3].classList.add("バツ");}
             else{if(sikakus[i+3].classList.contains('マル')){sikakus[i-1].textContent='×';sikakus[i-1].classList.add("バツ");}
             else{if(sikakus[i+1].classList.contains('マル')){sikakus[i+3].textContent='×';sikakus[i+3].classList.add("バツ");}
