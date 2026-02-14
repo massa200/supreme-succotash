@@ -29,31 +29,31 @@ let yoko3=0;
 let yoko4=0;
 let naname1=0;
 let naname2=0;
-
+let batsu=0;
+let worl=0;
 
 button.onclick=function(){
     for(let i=0;i<sikakus.length;i++){
-        sikakus[i].textContent='□';sikakus[i].classList.add('シカク');sikakus[i].classList.remove("マル");sikakus[i].classList.remove("バツ");
+        sikakus[i].textContent='□';sikakus[i].classList.add('シカク');sikakus[i].classList.remove("マル");sikakus[i].classList.remove("バツ");sikakus[i].classList.remove("リセット");
         taitoru.textContent=''; 
-        tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0; yoko2=0; yoko3=0;yoko4=0;naname1=0;naname2=0;
+        tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0; yoko2=0; yoko3=0;yoko4=0;naname1=0;naname2=0;batsu=0;worl=0;
         button.textContent ='reset';
     }   
         }
 for(let i=0;i<sikakus.length;i++){
     sikakus[i].onclick=function(){
+        batsu=0;
         if(sikakus[i].classList.contains('マル')) {}
         else {
         if(sikakus[i].classList.contains('バツ')){}
         else{
             sikakus[i].textContent='○';sikakus[i].classList.add("マル");
             //勝利判定
-            if(i%4 === 0){tate1=tate1+1;if(tate1 == 4){button.textContent ='you win!';}}
-            if(i%4 === 1){tate2=tate2+1;if(tate2 == 4){button.textContent ='you win!';}}
-            if(i%4 === 2){tate3=tate3+1;if(tate3 == 4){button.textContent ='you win!';}}
-            if(i%4 === 3){tate4=tate4+1;if(tate4 == 4){button.textContent ='you win!';}}
+            if(i%4 === 0){tate1=tate1+1;if(tate1 == 4){button.textContent ='you win!';worl=1;}}
+            if(i%4 === 1){tate2=tate2+1;if(tate2 == 4){button.textContent ='you win!';worl=1;}}
+            if(i%4 === 2){tate3=tate3+1;if(tate3 == 4){button.textContent ='you win!';worl=1;}}
+            if(i%4 === 3){tate4=tate4+1;if(tate4 == 4){button.textContent ='you win!';worl=1;}}
             /*
-
-            a >> b
             この演算子は「左シフト」という操作をします。
             二進数で指定された桁数分左にずらす、という操作です。
             例えば、7 >> 2 とした場合、
@@ -67,47 +67,55 @@ for(let i=0;i<sikakus.length;i++){
             今回の操作では、4で割ったうえであまりを切り捨てる操作をしています。
 
             */
-            if(i >> 2 == 0){yoko1=yoko1+1;if(yoko1 == 4){button.textContent ='you win!';}}
-            if(i >> 2 == 1){yoko2=yoko2+1;if(yoko2 == 4){button.textContent ='you win!';}}
-            if(i >> 2 == 2){yoko3=yoko3+1;if(yoko3 == 4){button.textContent ='you win!';}}
-            if(i >> 2 == 3){yoko4=yoko4+1;if(yoko4 == 4){button.textContent ='you win!';}}
-            if(i%5 === 0){naname1=naname1+1;if(naname1 == 4){button.textContent ='you win!';}}
-            if(i%3 === 0){if(i%15 === 0){}else{naname2=naname2+1;if(naname2 == 4){alert('you win!');}}}
+            if(i >> 2 == 0){yoko1=yoko1+1;if(yoko1 == 4){button.textContent ='you win!';worl=1;}}
+            if(i >> 2 == 1){yoko2=yoko2+1;if(yoko2 == 4){button.textContent ='you win!';worl=1;}}
+            if(i >> 2 == 2){yoko3=yoko3+1;if(yoko3 == 4){button.textContent ='you win!';worl=1;}}
+            if(i >> 2 == 3){yoko4=yoko4+1;if(yoko4 == 4){button.textContent ='you win!';worl=1;}}
+            if(i%5 === 0){naname1=naname1+1;if(naname1 == 4){button.textContent ='you win!';worl=1;}}
+            if(i%3 === 0){if(i%15 === 0){}else{naname2=naname2+1;if(naname2 == 4){button.textContent ='you win!';worl=1;}}}
             //
             //バツ   
-                    sikakus[i+1].textContent='×';
-                    sikakus[i+1].classList.add("バツ");
-                if(sikakus[i+1].classList.contains('マル','バツ')) {
-                    sikakus[i+1].classList.remove("バツ");
-                    sikakus[i+1].classList.add("マル");  
-                    sikakus[i+1].textContent='○';
-                    sikakus[i-1].textContent='×';
-                    sikakus[i-1].classList.add("バツ");
-                if(sikakus[i-1].classList.contains('マル')){
-                    sikakus[i-1].classList.remove("バツ");
-                    sikakus[i-1].classList.add("マル"); 
-                    sikakus[i-1].textContent='○';                   
-                    sikakus[i-3].textContent='×';
-                    sikakus[i-3].classList.add("バツ");}  
-                if(sikakus[i-3].classList.contains('マル')){
-                    sikakus[i-3].classList.remove("バツ");
-                    sikakus[i-3].classList.add("マル");
-                    sikakus[i-3].textContent='○'; 
-                    sikakus[i+3].textContent='×';
-                    sikakus[i+3].classList.add("バツ");}
-                if(sikakus[i+3].classList.contains('マル')) {
-                    sikakus[i+3].classList.remove("バツ");
-                    sikakus[i+3].classList.add("マル"); 
-                    sikakus[i+3].textContent='○';  
-                    sikakus[i+4].textContent='×';
-                    sikakus[i+4].classList.add("バツ");
-                }
-            }}
+            if(worl==1){for(let p=0;p<sikakus.length;p++){
+            sikakus[p].classList.add('マル');sikakus[p].classList.add('リセット');}}
+            else{
+            for(let s=0;s<sikakus.length;s++){
+                if(sikakus[s].classList.contains('マル')){}
+                else{if(sikakus[s].classList.contains('バツ')){}
+                    else{button.textContent =tate1;
+                    if(tate1 == 3){
+                    if(s%4 === 0){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}else{}}
+                    else{if(tate2 == 3){
+                    if(s%4 === 1){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}else{}}
+                    else{if(tate3 == 3){
+                    if(s%4 === 2){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}else{}}
+                    else{if(tate4 == 3){
+                    if(s%4 === 3){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}else{}}
+                    else{
+                    batsu=batsu+1;if(batsu<=1){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}
+                    
+
+                    if(s%4 === 0){tate1=tate1-1;if(tate1 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s%4 === 1){tate2=tate2-1;if(tate2 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s%4 === 2){tate3=tate3-1;if(tate3 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s%4 === 3){tate4=tate4-1;if(tate4 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s >> 2 == 0){yoko1=yoko1-1;if(yoko1 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s >> 2 == 1){yoko2=yoko2-1;if(yoko2 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s >> 2 == 2){yoko3=yoko3-1;if(yoko3 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s >> 2 == 3){yoko4=yoko4-1;if(yoko4 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s%5 === 0){naname1=naname1-1;if(naname1 == -4){button.textContent ='you lose...';worl=1;}}
+                    if(s%3 === 0){if(s%15 === 0){}else{naname2=naname2-1;if(naname2 == -4){button.textContent ='you lose...';worl=1;}}}
+            }}}}
+        }
+        }}  
 
         }
+                    if(worl==1){for(let p=0;p<sikakus.length;p++){
+                    sikakus[p].classList.add('マル');sikakus[p].classList.add('リセット');}}
+        }
     }
-    }
-
-
-    
-    
+}}
