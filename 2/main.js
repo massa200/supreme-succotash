@@ -50,7 +50,7 @@ for(let i=0;i<sikakus.length;i++){
             if(i%4 === 0){tate1=tate1+1;if(tate1 == 4){button.textContent ='you win!';}}
             if(i%4 === 1){tate2=tate2+1;if(tate2 == 4){button.textContent ='you win!';}}
             if(i%4 === 2){tate3=tate3+1;if(tate3 == 4){button.textContent ='you win!';}}
-            if(i%4 === 3){tate3=tate4+1;if(tate4 == 4){button.textContent ='you win!';}}
+            if(i%4 === 3){tate4=tate4+1;if(tate4 == 4){button.textContent ='you win!';}}
             /*
 
             a >> b
@@ -72,54 +72,42 @@ for(let i=0;i<sikakus.length;i++){
             if(i >> 2 == 2){yoko3=yoko3+1;if(yoko3 == 4){button.textContent ='you win!';}}
             if(i >> 2 == 3){yoko4=yoko4+1;if(yoko4 == 4){button.textContent ='you win!';}}
             if(i%5 === 0){naname1=naname1+1;if(naname1 == 4){button.textContent ='you win!';}}
-            if(i%3 === 0){naname2=naname2+1;if(naname2 == 4){button.textContent ='you win!';}}
+            if(i%3 === 0){if(i%15 === 0){}else{naname2=naname2+1;if(naname2 == 4){alert('you win!');}}}
             //
             //バツ   
-            if(i>=8){
-                if(sikakus[i-4].classList.contains('マル')) {
+                    sikakus[i+1].textContent='×';
+                    sikakus[i+1].classList.add("バツ");
+                if(sikakus[i+1].classList.contains('マル','バツ')) {
+                    sikakus[i+1].classList.remove("バツ");
+                    sikakus[i+1].classList.add("マル");  
+                    sikakus[i+1].textContent='○';
+                    sikakus[i-1].textContent='×';
+                    sikakus[i-1].classList.add("バツ");
+                if(sikakus[i-1].classList.contains('マル')){
+                    sikakus[i-1].classList.remove("バツ");
+                    sikakus[i-1].classList.add("マル"); 
+                    sikakus[i-1].textContent='○';                   
+                    sikakus[i-3].textContent='×';
+                    sikakus[i-3].classList.add("バツ");}  
+                if(sikakus[i-3].classList.contains('マル')){
+                    sikakus[i-3].classList.remove("バツ");
+                    sikakus[i-3].classList.add("マル");
+                    sikakus[i-3].textContent='○'; 
+                    sikakus[i+3].textContent='×';
+                    sikakus[i+3].classList.add("バツ");}
+                if(sikakus[i+3].classList.contains('マル')) {
+                    sikakus[i+3].classList.remove("バツ");
+                    sikakus[i+3].classList.add("マル"); 
+                    sikakus[i+3].textContent='○';  
                     sikakus[i+4].textContent='×';
                     sikakus[i+4].classList.add("バツ");
-                } else if(sikakus[i+1].classList.contains('マル')) {
-                    sikakus[i-2].textContent='×';
-                    sikakus[i-2].classList.add("バツ");
-                } else if(sikakus[i-3].classList.contains('マル')) {
-                    sikakus[i+1].textContent='×';
-                    sikakus[i+1].classList.add("バツ");
-                } else if(sikakus[i-1].classList.contains('マル')) {
-                    sikakus[i-3].textContent='×';
-                    sikakus[i-3].classList.add("バツ");
-                } else {
-                    sikakus[i-1].textContent='×';
-                    sikakus[i-1].classList.add("バツ");
                 }
-            } else if(i>=4){
-                if(sikakus[i+4].classList.contains('マル')) {
-                    sikakus[i-4].textContent='×';
-                    sikakus[i-4].classList.add("バツ");
-                } else if(sikakus[i-1].classList.contains('マル')) {
-                    sikakus[i-3].textContent='×';
-                    sikakus[i-3].classList.add("バツ");
-                } else if(sikakus[i+3].classList.contains('マル')) {
-                    sikakus[i-1].textContent='×';
-                    sikakus[i-1].classList.add("バツ");
-                } else if(sikakus[i+1].classList.contains('マル')) {
-                    sikakus[i+3].textContent='×';
-                    sikakus[i+3].classList.add("バツ");
-                } else {
-                    sikakus[i+1].textContent='×';
-                    sikakus[i+1].classList.add("バツ");
-                }
-            } else if(sikakus[i+1].classList.contains('マル')) {
-                sikakus[i+3].textContent='×';
-                sikakus[i+3].classList.add("バツ");
-            } else {
-                sikakus[i+1].textContent='×';
-                sikakus[i+1].classList.add("バツ");
-            }
+            }}
+
         }
     }
     }
-}
+
 
     
     
