@@ -32,18 +32,19 @@ let naname1=0;
 let naname2=0;
 let batsu=0;
 let worl=0;
+let reach=0;
 const battu = document.getElementById('あほ');battu.textContent=batsu;
 button.onclick=function(){
     for(let i=0;i<sikakus.length;i++){
         sikakus[i].textContent='□';sikakus[i].classList.add('シカク');sikakus[i].classList.remove("マル");sikakus[i].classList.remove("バツ");sikakus[i].classList.remove("リセット");
         taitoru.textContent=''; 
-        tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0; yoko2=0; yoko3=0;yoko4=0;naname1=0;naname2=0;batsu=0;worl=0;
+        tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0; yoko2=0; yoko3=0;yoko4=0;naname1=0;naname2=0;batsu=0;worl=0;reach=0;
         button.textContent ='reset';battu.textContent=tate1;
     }   
         }
 for(let i=0;i<sikakus.length;i++){
     sikakus[i].onclick=function(){
-         tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0;yoko2=0;yoko3=0;yoko4=0;naname1=0;naname2=0;
+         tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0;yoko2=0;yoko3=0;yoko4=0;naname1=0;naname2=0;reach=0;
         if(sikakus[i].classList.contains('マル')) {}
         else {
         if(sikakus[i].classList.contains('バツ')){}
@@ -94,10 +95,13 @@ for(let i=0;i<sikakus.length;i++){
             if(worl==1){for(let p=0;p<sikakus.length;p++){
             sikakus[p].classList.add('マル');sikakus[p].classList.add('リセット');}}
             else{batsu=0;
+                let reach = Math.floor(Math.random() * 10);battu.textContent=reach;
             for(let s=0;s<sikakus.length;s++){
                 if(sikakus[s].classList.contains('マル')){}
                 else{if(sikakus[s].classList.contains('バツ')){}
-                    else{batsu=batsu+1;
+                else{batsu=batsu+1;
+                
+                if(reach <= 5){
                     if(tate1 == 3){
                 if(s%4 === 0){
                     sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}}                     
@@ -128,10 +132,14 @@ for(let i=0;i<sikakus.length;i++){
                     else{if(naname2 == 3){
                 if(s%3 === 0){
                     sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}}
-                else{
+                    else{
+                if(batsu<=1){
+                    sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}}}}}}}}}}}
+                }
+                if(reach>=6){
                 if(batsu<=1){
                     sikakus[s].textContent='×';sikakus[s].classList.add("バツ");}}
-            tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0;yoko2=0;yoko3=0;yoko4=0;naname1=0;naname2=0;
+                    tate1=0;tate2=0;tate3=0;tate4=0;yoko1=0;yoko2=0;yoko3=0;yoko4=0;naname1=0;naname2=0;
                     for(let x=0;x<sikakus.length;x++){        
                     if(sikakus[x].classList.contains('マル')){
                     if(x%4 === 0){tate1=tate1+1;if(tate1 == 4){button.textContent ='you win!';worl=1;}}
@@ -155,19 +163,19 @@ for(let i=0;i<sikakus.length;i++){
                     if(x >> 2 == 3){yoko4=yoko4-1;if(yoko4 == -4){button.textContent ='you lose...';worl=1;}}
                     if(x%5 === 0){naname1=naname1-1;if(naname1 == -4){button.textContent ='you lose...';worl=1;}}
                     if(x%3 === 0){if(x%15 === 0){}else{naname2=naname2-1;if(naname2 == -4){button.textContent ='you lose...';worl=1;}}}}}
-                    battu.textContent=tate2;
+                    
                 } 
             if(worl==1){for(let p=0;p<sikakus.length;p++){
              sikakus[p].classList.add('マル');sikakus[p].classList.add('リセット');}}
         
-        } 
-        }
-    }
-    }
-    }
-}
+        
+        
+    
+    
+    
 
-}}}
+
+
 
                 
 
